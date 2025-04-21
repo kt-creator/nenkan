@@ -4,29 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>南山父母懇年間行事予定</title>
+  <title>画像表示</title>
   <style>
-    /* ページ全体を余白なしで使用 */
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
+      background-color: #f0f0f0;
+    }
+
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
     }
-    /* 画像は画面幅に応じて最大100%幅、高さ自動調整 */
-    img {
+
+    .container {
       max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
       height: auto;
-      display: block;
+      max-width: 800px; /* PCでの表示制限 */
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <!-- 同じフォルダにある "nankan.jpg" を表示 -->
-  <img src="nenkan.jpg" alt="nenkan image">
+  <div class="container">
+    <img src="nankan.jpg" alt="nankan image">
+  </div>
 </body>
 </html>
