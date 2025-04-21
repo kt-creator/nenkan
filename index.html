@@ -2,42 +2,35 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>画像表示</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #f0f0f0;
-    }
-
-    body {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .container {
-      max-width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      text-align: center;
+      height: 100vh;
+      background-color: #f9f9f9;
     }
 
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      max-width: 800px; /* PCでの表示制限 */
-      display: inline-block;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="nankan.jpg" alt="nankan image">
-  </div>
+  <img src="nankan.jpg" alt="nankanの画像">
 </body>
 </html>
